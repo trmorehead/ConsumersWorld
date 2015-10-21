@@ -4,9 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
-//test from trmorehead0 to see if the will update.
-//test is also in build.grade file.
+//testing again from trmorehead0
 public class MainActivity extends AppCompatActivity {
 
     @Override
