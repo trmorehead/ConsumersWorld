@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+//test from trmorehead0 to see if the will update.
+//test is also in build.grade file.
 public class MainActivity extends AppCompatActivity {
 
     @Override
