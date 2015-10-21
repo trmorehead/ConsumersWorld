@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 //another test from desktop to laptop
 //one more desktop to laptop test
+//testing to Kunle and Amanda.
 public class MainActivity extends AppCompatActivity {
 
     @Override
