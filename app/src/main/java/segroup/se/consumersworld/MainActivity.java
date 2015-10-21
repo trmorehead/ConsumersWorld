@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-//testing again from trmorehead0
+//testing from trmorehead0
+//first commit the changes to git then push the file to github.
+//then others can sync and update their files without even closing AS.
 public class MainActivity extends AppCompatActivity {
 
     @Override
