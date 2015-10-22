@@ -13,6 +13,7 @@ import android.view.MenuItem;
 //testing to Kunle and Amanda.
 //testing to kendall
 //testing to Dave
+//testing to Thomas
 public class MainActivity extends AppCompatActivity {
 
     @Override
