@@ -8,12 +8,6 @@ import android.view.MenuItem;
 //first commit the changes to git then push the file to github.
 //then others can sync and update their files without even closing AS.
 
-//another test from desktop to laptop
-//one more desktop to laptop test
-//testing to Kunle and Amanda.
-//testing to kendall
-//testing to Dave
-//testing to Thomas
 public class MainActivity extends AppCompatActivity {
 
     @Override
