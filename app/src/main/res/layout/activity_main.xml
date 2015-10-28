@@ -8,14 +8,5 @@
     android:background="@drawable/spc">
 
 
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:text="Welcome to my App"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_margin="20dp"/>
-
-
 </LinearLayout>
  
