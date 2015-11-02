@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/bg1">
+    android:background="@drawable/earthside">
 
 
     <ImageButton
@@ -16,7 +16,7 @@
 
     <TextView
         android:layout_height="wrap_content"
-        android:text="Welcome to my App"
+        android:text="Welcome to Consumers World"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_margin="20dp"/>
