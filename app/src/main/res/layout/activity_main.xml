@@ -5,15 +5,14 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/spc">
-
-
+    android:background="@drawable/earthside">
 
     <TextView
-        android:layout_height="wrap_content"
-        android:text="Welcome to my App"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Consumers World"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_margin="20dp"/>
 
 
