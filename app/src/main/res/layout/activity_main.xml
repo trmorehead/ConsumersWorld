@@ -15,6 +15,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_margin="20dp"/>
 
+    <Spinner
+        android:id = "@+id/page1Spinner"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:spinnerMode = "dropdown"
+        />
 
 </LinearLayout>
  

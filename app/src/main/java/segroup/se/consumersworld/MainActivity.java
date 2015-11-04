@@ -1,14 +1,17 @@
 package segroup.se.consumersworld;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 //testing from trmorehead0
 //first commit the changes to git then push the file to github.
 //then others can sync and update their files without even closing AS.
 
-public class MainActivity extends AppCompatActivity {
+public abstract class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +39,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+
+    public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+
+        switch (position) {
+            case 0:
+                // Whatever we want to happen when the first item gets selected
+                break;
+            case 1:
+                // Whatever we want to happen when the second item gets selected
+                break;
+            case 2:
+                // Whatever we want to happen when the thrid item gets selected
+                break;
+            //cases 3 - 10
+
+        }
     }
 }
