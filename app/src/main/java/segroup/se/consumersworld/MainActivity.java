@@ -7,16 +7,28 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 //testing from trmorehead0
 //first commit the changes to git then push the file to github.
 //then others can sync and update their files without even closing AS.
 
-public abstract class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        spinner = (Spinner)findViewById(R.id.spinner);
+
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Currencies, android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
     @Override
@@ -42,21 +54,15 @@ public abstract class MainActivity extends AppCompatActivity implements OnItemSe
     }
 
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        TextView myText = (TextView) view;
+        Toast.makeText(this, "You Selected " + myText.getText(), Toast.LENGTH_SHORT).show();
+    }
 
-    public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
 
-        switch (position) {
-            case 0:
-                // Whatever we want to happen when the first item gets selected
-                break;
-            case 1:
-                // Whatever we want to happen when the second item gets selected
-                break;
-            case 2:
-                // Whatever we want to happen when the thrid item gets selected
-                break;
-            //cases 3 - 10
-
-        }
     }
 }
+
