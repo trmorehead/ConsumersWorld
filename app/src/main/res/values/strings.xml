@@ -3,4 +3,17 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="Currencies">
+        <item>Euros</item>
+        <item>Yen</item>
+        <item>Pounds</item>
+        <item>Canadian Dollars</item>
+        <item>Australian Dollar</item>
+        <item>Franc</item>
+        <item>Ruble</item>
+        <item>Hong Kong Dollar</item>
+        <item>Singapore Dollar</item>
+        <item>Yuan</item>
+    </string-array>
 </resources>
