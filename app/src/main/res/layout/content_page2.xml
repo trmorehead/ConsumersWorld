@@ -12,7 +12,7 @@
 
     <Spinner
         android:id = "@+id/spinner"
-        android:layout_width = "500px"
+        android:layout_width = "160dp"
         android:layout_height = "wrap_content"
         android:spinnerMode="dropdown"
         android:layout_alignParentBottom="true"
@@ -27,7 +27,66 @@
         android:spinnerMode="dropdown"
         android:layout_alignTop="@+id/spinner"
         android:layout_toRightOf="@+id/spinner"
+        android:layout_toEndOf="@+id/spinner"
+        android:paddingLeft="38dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From Currency:"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:layout_above="@+id/spinner"
+        android:layout_alignRight="@id/spinner"
+        android:paddingRight="50dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To Currency:"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/spinner"
+        android:layout_alignRight="@id/spinner2"
+        android:paddingRight="0px"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="From Currency"
+        android:textColorHint="#787878"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/spinner2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:hint="Converted Rate"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/spinner2"
+        android:layout_toRightOf="@+id/spinner"
         android:layout_toEndOf="@+id/spinner" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:hint="Consumers World"
+        android:textColorHint="#D8D8D8"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="150dp"/>
 
 
 </RelativeLayout>
