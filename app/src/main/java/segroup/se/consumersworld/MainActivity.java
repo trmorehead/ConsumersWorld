@@ -1,6 +1,7 @@
 package segroup.se.consumersworld;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -14,24 +15,21 @@ import android.widget.Toast;
 //first commit the changes to git then push the file to github.
 //then others can sync and update their files without even closing AS.
 
-public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
-    private Button btnClick;
-    Spinner spinner;
+    Button btnClick;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnClick = (Button) findViewById(R.id.Button);
+        btnClick = (Button) findViewById(R.id.button);
+        btnClick.setOnClickListener(this);
 
 
-        spinner = (Spinner)findViewById(R.id.spinner);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Currencies, android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
     }
 
     //@Override
@@ -57,6 +55,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
    // }
 
 
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         TextView myText = (TextView) view;
@@ -67,6 +66,31 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void btnClick1()
+    {
+        startActivity(new Intent(getApplicationContext(), Page2Activity.class));
+    }
+
+    public void btnClick2()
+    {
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch(v.getId())
+        {
+            case R.id.button:
+                btnClick1();
+                break;
+
+            case R.id.button2:
+                btnClick2();
+                break;
+        }
     }
 }
 

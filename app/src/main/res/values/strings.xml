@@ -16,4 +16,5 @@
         <item>Hong Kong Dollar</item>
         <item>Yuan</item>
     </string-array>
+    <string name="title_activity_page2">Page2Activity</string>
 </resources>
