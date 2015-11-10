@@ -23,7 +23,7 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
         spinner = (Spinner)findViewById(R.id.spinner);
