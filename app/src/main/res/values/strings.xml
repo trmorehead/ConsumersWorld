@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="Currencies">
+        <item>US Dollar</item>
         <item>Euros</item>
         <item>Yen</item>
         <item>Pounds</item>
@@ -13,7 +14,6 @@
         <item>Franc</item>
         <item>Ruble</item>
         <item>Hong Kong Dollar</item>
-        <item>Singapore Dollar</item>
         <item>Yuan</item>
     </string-array>
 </resources>
