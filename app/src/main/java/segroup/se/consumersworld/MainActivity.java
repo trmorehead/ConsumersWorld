@@ -20,6 +20,11 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     Button btnClick;
 
 
+    /**
+     * calls the activiy.xml file to display the page.
+     * defines the buttons.
+     * @param savedInstanceState bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +60,13 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
    // }
 
 
+    /**
+     * Displays message when an Item from either spinner is selected
+     * @param parent not sure what this does
+     * @param view also not sure
+     * @param position positioning
+     * @param id id
+     */
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -68,16 +80,28 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
     }
 
+    /**
+     * For when the currency button is selected
+     * Page2 is the main currency converter page
+     */
     public void btnClick1()
     {
         startActivity(new Intent(getApplicationContext(), Page2Activity.class));
     }
 
+    /**
+     * For when the goods button is clicked
+     * page3 is the goods conversion page
+     */
     public void btnClick2()
     {
 
     }
 
+    /**
+     * action to be taken when a button is clicked
+     * @param v view
+     */
     @Override
     public void onClick(View v) {
 
