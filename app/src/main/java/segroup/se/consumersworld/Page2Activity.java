@@ -18,6 +18,7 @@ import android.widget.*;
 public class Page2Activity extends Activity implements AdapterView.OnItemSelectedListener {
 
     Spinner spinner;
+    Spinner spinner2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +27,12 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
         //setSupportActionBar(toolbar);
 
         spinner = (Spinner)findViewById(R.id.spinner);
-
+        spinner2 = (Spinner) findViewById(R.id.spinner2);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Currencies, android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        spinner2.setAdapter(adapter);
+        spinner2.setOnItemSelectedListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
