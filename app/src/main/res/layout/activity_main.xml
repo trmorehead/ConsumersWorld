@@ -36,14 +36,14 @@
         android:background="@drawable/cart"/>
 
     <Button
-        android:layout_width="550px"
+        android:layout_width="170dp"
         android:layout_height="550px"
         android:text=""
         android:id="@+id/button"
         android:layout_alignBottom="@+id/button2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/chooseConverter" />
+        android:background="@drawable/converter2" />
     </RelativeLayout>
 
 </RelativeLayout>
