@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Consumers World"
+        android:text=""
         android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView"
@@ -50,11 +50,10 @@
             android:layout_width="150dp"
             android:layout_height="300dp"
             android:id="@+id/imageView"
-            android:layout_above="@+id/button2"
-            android:layout_centerHorizontal="true"
             android:background="@drawable/welcom"
             android:paddingTop="200dp"
-            android:layout_alignParentTop="true"/>
+            android:layout_above="@+id/button"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
 </RelativeLayout>
