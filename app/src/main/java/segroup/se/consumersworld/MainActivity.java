@@ -1,10 +1,13 @@
 package segroup.se.consumersworld;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,20 +15,26 @@ import android.widget.Toast;
 //first commit the changes to git then push the file to github.
 //then others can sync and update their files without even closing AS.
 
-public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
-    Spinner spinner;
+    Button btnClick;
 
+
+    /**
+     * calls the activiy.xml file to display the page.
+     * defines the buttons.
+     * @param savedInstanceState bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        spinner = (Spinner)findViewById(R.id.spinner);
+        btnClick = (Button) findViewById(R.id.button);
+        btnClick.setOnClickListener(this);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Currencies, android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+
+
     }
 
     //@Override
@@ -51,15 +60,61 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
    // }
 
 
+    /**
+     * Displays message when an Item from either spinner is selected
+     * @param parent not sure what this does
+     * @param view also not sure
+     * @param position positioning
+     * @param id id
+     */
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         TextView myText = (TextView) view;
+        ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
         Toast.makeText(this, "You Selected " + myText.getText(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    /**
+     * For when the currency button is selected
+     * Page2 is the main currency converter page
+     */
+    public void btnClick1()
+    {
+        startActivity(new Intent(getApplicationContext(), Page2Activity.class));
+    }
+
+    /**
+     * For when the goods button is clicked
+     * page3 is the goods conversion page
+     */
+    public void btnClick2()
+    {
+
+    }
+
+    /**
+     * action to be taken when a button is clicked
+     * @param v view
+     */
+    @Override
+    public void onClick(View v) {
+
+        switch(v.getId())
+        {
+            case R.id.button:
+                btnClick1();
+                break;
+
+            case R.id.button2:
+                btnClick2();
+                break;
+        }
     }
 }
 

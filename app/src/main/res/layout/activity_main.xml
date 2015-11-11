@@ -8,20 +8,53 @@
     android:background="@drawable/earthside"
     tools:context=".MainActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Consumers World"
+        android:text=""
         android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_margin="20dp"/>
+        android:id="@+id/textView"
+        android:layout_above="@+id/spinner"
+        android:layout_centerHorizontal="true" />
 
-    <Spinner
-        android:id = "@+id/spinner"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:textColor="#FFFFFF"
-        android:spinnerMode="dropdown" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_width="450px"
+        android:layout_height="400px"
+        android:text=""
+        android:id="@+id/button2"
+        android:background="@drawable/cart2"
+        android:paddingBottom="150px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="550px"
+        android:text=""
+        android:id="@+id/button"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="10dp"
+        android:background="@drawable/converter2" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="300dp"
+            android:id="@+id/imageView"
+            android:background="@drawable/welcom"
+            android:paddingTop="200dp"
+            android:layout_above="@+id/button"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
 </RelativeLayout>
  
