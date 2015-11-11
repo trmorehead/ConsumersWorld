@@ -25,15 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     <Button
-        android:layout_width="550px"
-        android:layout_height="550px"
+        android:layout_width="450px"
+        android:layout_height="400px"
         android:text=""
         android:id="@+id/button2"
+        android:background="@drawable/cart2"
+        android:paddingBottom="150px"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="132dp"
-        android:background="@drawable/cart"/>
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="170dp"
