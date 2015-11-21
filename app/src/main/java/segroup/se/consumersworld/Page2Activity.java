@@ -3,22 +3,18 @@ package segroup.se.consumersworld;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.*;
 
 public class Page2Activity extends Activity implements AdapterView.OnItemSelectedListener {
 
-    Spinner spinner;
-    Spinner spinner2;
+    Spinner fromCurrSpinner;
+    Spinner toCurrSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,18 +23,18 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
         // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        spinner = (Spinner) findViewById(R.id.spinner);
-        spinner2 = (Spinner) findViewById(R.id.spinner2);
+        fromCurrSpinner = (Spinner) findViewById(R.id.fromCurrSpinner);
+        toCurrSpinner = (Spinner) findViewById(R.id.toCurrSpinner);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Currencies, android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
-        spinner2.setAdapter(adapter);
-        spinner2.setOnItemSelectedListener(this);
+        fromCurrSpinner.setAdapter(adapter);
+        fromCurrSpinner.setOnItemSelectedListener(this);
+        toCurrSpinner.setAdapter(adapter);
+        toCurrSpinner.setOnItemSelectedListener(this);
 
     }
 
-    public void onClick(View view) {
-        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+    protected void onClick(View v) {
+        Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
     }
 

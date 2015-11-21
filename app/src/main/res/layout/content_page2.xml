@@ -11,7 +11,7 @@
     tools:showIn="@layout/activity_page2" tools:context="segroup.se.consumersworld.Page2Activity">
 
     <Spinner
-        android:id = "@+id/spinner"
+        android:id = "@+id/fromCurrSpinner"
         android:layout_width = "160dp"
         android:layout_height = "wrap_content"
         android:spinnerMode="dropdown"
@@ -23,11 +23,11 @@
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner2"
+        android:id="@+id/toCurrSpinner"
         android:spinnerMode="dropdown"
-        android:layout_alignTop="@+id/spinner"
-        android:layout_toRightOf="@+id/spinner"
-        android:layout_toEndOf="@+id/spinner"
+        android:layout_alignTop="@+id/fromCurrSpinner"
+        android:layout_toRightOf="@+id/fromCurrSpinner"
+        android:layout_toEndOf="@+id/fromCurrSpinner"
         android:paddingLeft="38dp"/>
 
     <TextView
@@ -37,8 +37,8 @@
         android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView"
-        android:layout_above="@+id/spinner"
-        android:layout_alignRight="@id/spinner"
+        android:layout_above="@+id/fromCurrSpinner"
+        android:layout_alignRight="@id/fromCurrSpinner"
         android:paddingRight="50dp"
         android:layout_centerHorizontal="true" />
 
@@ -49,8 +49,8 @@
         android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView2"
-        android:layout_above="@+id/spinner"
-        android:layout_alignRight="@id/spinner2"
+        android:layout_above="@+id/fromCurrSpinner"
+        android:layout_alignRight="@id/toCurrSpinner"
         android:paddingRight="0px"
         android:layout_centerHorizontal="true" />
 
@@ -61,7 +61,7 @@
         android:hint="From Currency"
         android:textColorHint="#787878"
         android:inputType="numberDecimal"
-        android:layout_below="@+id/spinner2"
+        android:layout_below="@+id/toCurrSpinner"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -73,9 +73,9 @@
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:id="@+id/textView3"
-        android:layout_below="@+id/spinner2"
-        android:layout_toRightOf="@+id/spinner"
-        android:layout_toEndOf="@+id/spinner" />
+        android:layout_below="@+id/toCurrSpinner"
+        android:layout_toRightOf="@+id/fromCurrSpinner"
+        android:layout_toEndOf="@+id/fromCurrSpinner" />
 
     <TextView
         android:layout_width="wrap_content"
