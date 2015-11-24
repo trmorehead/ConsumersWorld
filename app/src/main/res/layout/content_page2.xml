@@ -83,7 +83,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:hint="Consumers World"
         android:textColorHint="#D8D8D8"
-        android:id="@+id/textView4"
+        android:id="@+id/titleText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:paddingRight="150dp"/>
@@ -95,7 +95,7 @@
         android:hint="Good and Price"
         android:paddingLeft="10dp"
         android:textColorHint="#D8D8D8"
-        android:id="@+id/textView5"
+        android:id="@+id/toGoodRefPrice"
         android:layout_below="@+id/FromCurrTextInput"
         android:layout_alignLeft="@+id/convertedCurrAutoUpdateText"
         android:layout_alignStart="@+id/convertedCurrAutoUpdateText" />
@@ -105,10 +105,10 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:hint="Good and Price"
-        android:layout_alignBottom="@id/textView5"
+        android:layout_alignBottom="@id/toGoodRefPrice"
         android:paddingTop="5dp"
         android:textColorHint="#D8D8D8"
-        android:id="@+id/textView6"
+        android:id="@+id/fromGoodRefPrice"
         android:layout_below="@+id/convertedCurrAutoUpdateText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
