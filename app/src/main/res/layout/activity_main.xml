@@ -16,7 +16,6 @@
         android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView"
-        android:layout_above="@+id/spinner"
         android:layout_centerHorizontal="true" />
 
 
