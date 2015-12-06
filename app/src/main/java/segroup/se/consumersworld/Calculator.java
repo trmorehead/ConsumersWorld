@@ -3,7 +3,7 @@ package segroup.se.consumersworld;
 import java.util.HashMap;
 
 /**
- * Calculates the
+ * Calculates the rate
  * Created by tmore on 12/5/2015.
  */
 public class Calculator {
