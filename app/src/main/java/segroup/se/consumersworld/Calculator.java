@@ -25,8 +25,17 @@ public class Calculator {
      * that is created using the Fetch class.
      */
     public void altCurrencyValue(){
+        public static void main(String[] args) throws FileNotFoundException {
+            Scanner scan1 = new Scanner(new FileReader("exchangerates.txt"));
+            HashMap<String code, double rate> currencyHashMap = new HashMap<String, double >();
+            while (scanner.hasNextLine()) {
 
-    }
+                String[] columns = scanner.nextLine().split("\t\t");
+                currencyHashMap.put(columns[0], columns. double.parseDouble(). [1]);
+                )
+
+
+            }
 
     /**
      * Retrieves a double value of world currency values
