@@ -1,6 +1,9 @@
 package segroup.se.consumersworld;
 
-import java.util.HashMap;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.*;
+import java.util.Scanner;
 
 /**
  * Calculates the rate
@@ -11,7 +14,7 @@ public class Calculator {
     private String userTargetCurrency;
     private double userStartAmount;
     private double resultToUser;
-    private HashMap currencyHashMap;
+    private HashMap<String, double> currencyHashMap;
 
     /**
      *
@@ -24,18 +27,17 @@ public class Calculator {
      *Creates a Hashmap from the text file
      * that is created using the Fetch class.
      */
-    public void altCurrencyValue(){
-        public static void main(String[] args) throws FileNotFoundException {
+        public void altCurrencyValue() throws FileNotFoundException {
             Scanner scan1 = new Scanner(new FileReader("exchangerates.txt"));
-            HashMap<String code, double rate> currencyHashMap = new HashMap<String, double >();
-            while (scanner.hasNextLine()) {
+             currencyHashMap = new HashMap<String, double>();
+            while (scan1.hasNextLine()) {
 
-                String[] columns = scanner.nextLine().split("\t\t");
+                String[] columns = scan1.nextLine().split("\t\t");
                 currencyHashMap.put(columns[0], columns. double.parseDouble(). [1]);
-                )
 
 
             }
+        }
 
     /**
      * Retrieves a double value of world currency values
