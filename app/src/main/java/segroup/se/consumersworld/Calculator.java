@@ -1,5 +1,8 @@
 package segroup.se.consumersworld;
 
+import android.app.Activity;
+import android.widget.EditText;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
@@ -9,10 +12,11 @@ import java.util.Scanner;
  * Calculates the rate
  * Created by tmore on 12/5/2015.
  */
-public class Calculator {
+public class Calculator extends Activity {
     private String userStartCurrency;
     private String userTargetCurrency;
-    private double userStartAmount;
+    private Double userStartAmount;
+    EditText rawTargetCurr;
     private double resultToUser;
     private HashMap<String, Double> currencyHashMap;
 
@@ -23,6 +27,9 @@ public class Calculator {
     {
         userStartCurrency = Page2Activity.fromCurrSpinner.getSelectedItem().toString();
         userTargetCurrency = Page2Activity.toCurrSpinner.getSelectedItem().toString();
+        rawTargetCurr = (EditText) findViewById(R.id.FromCurrTextInput);
+        String holder = rawTargetCurr.toString();
+        userStartAmount = Double.valueOf(holder);
     }
 
     /**
@@ -85,8 +92,8 @@ public class Calculator {
             currency1= currencyHashMap.get(userStartCurrency).doubleValue();
             currency1=currency1*userStartAmount;
             currency2=currencyHashMap.get(userTargetCurrency).doubleValue();
-            result=currency1*currency2;
-            return result;
+            resultToUser=currency1*currency2;
+            return resultToUser;
         }
     }
 
