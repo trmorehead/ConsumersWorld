@@ -2,6 +2,7 @@ package segroup.se.consumersworld;
 
 import android.app.Activity;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -24,8 +25,10 @@ public class Calculator extends Activity {
      */
     public Calculator()
     {
-        userStartCurrency = Page2Activity.fromCurrSpinner.getSelectedItem().toString();
-        userTargetCurrency = Page2Activity.toCurrSpinner.getSelectedItem().toString();
+        Spinner fromCurrSpinner = (Spinner) findViewById(R.id.fromCurrSpinner);
+        Spinner toCurrSpinner = (Spinner) findViewById(R.id.toCurrSpinner);
+        userStartCurrency = fromCurrSpinner.getSelectedItem().toString();
+        userTargetCurrency = toCurrSpinner.getSelectedItem().toString();
         rawTargetCurr = (EditText) findViewById(R.id.FromCurrTextInput);
         String holder = rawTargetCurr.toString();
         userStartAmount = Double.valueOf(holder);
