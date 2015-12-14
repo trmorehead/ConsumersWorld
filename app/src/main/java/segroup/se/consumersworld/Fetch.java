@@ -95,12 +95,12 @@ public class Fetch extends AsyncTask<Void, Void, JSONObject>
      */
     public void onPostExecute()
     {
-        //if(response == null)
-        // {
-        //    response = "THERE WAS AN ERROR";
+        //if(line == null)
+        //{
+        //    line = "THERE WAS AN ERROR";
         //}
         //progressBar.setVisibility(View.GONE);
-        //Log.i("INFO", response);
-        //responseView.setText(response);
+        //Log.i("INFO", line);
+        //lineView.setText(line);
     }
 }
