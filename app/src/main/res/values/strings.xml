@@ -17,4 +17,5 @@
         <item>Yuan</item>
     </string-array>
     <string name="title_activity_page2">Page2Activity</string>
+    <string name="title_activity_page3">PAge3Activity</string>
 </resources>
