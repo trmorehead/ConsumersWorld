@@ -24,7 +24,7 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".PAge3Activity"
+            android:name=".Page3Activity"
             android:label="@string/title_activity_page3"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>

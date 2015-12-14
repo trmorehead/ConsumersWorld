@@ -8,6 +8,6 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@drawable/earthside"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_page3" tools:context="segroup.se.consumersworld.PAge3Activity">
+    tools:showIn="@layout/activity_page3" tools:context="segroup.se.consumersworld.Page3Activity">
 
 </RelativeLayout>
