@@ -33,8 +33,8 @@ public class Calculator {
             while (scan1.hasNextLine()) {
 
                 String[] columns = scan1.nextLine().split("\t\t");
-                currencyHashMap.put(columns[0], columns.double.parseDouble().[1]);
 
+                currencyHashMap.put(columns[0], (double)columns[1].Double.parseDouble());
 
             }
         }
