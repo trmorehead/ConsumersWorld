@@ -53,4 +53,12 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
 
     }
 
+    /**
+     *
+     */
+    public String getFromCurrSpinner()
+    {
+        return fromCurrSpinner.getSelectedItem().toString();
+    }
+
 }
