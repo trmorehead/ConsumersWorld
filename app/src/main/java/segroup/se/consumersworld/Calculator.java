@@ -19,8 +19,10 @@ public class Calculator {
     /**
      *
      */
-    public Calculator(){
-
+    public Calculator()
+    {
+        userStartCurrency = Page2Activity.fromCurrSpinner.getSelectedItem().toString();
+        userTargetCurrency = Page2Activity.toCurrSpinner.getSelectedItem().toString();
     }
 
     /**
@@ -33,8 +35,8 @@ public class Calculator {
             while (scan1.hasNextLine()) {
 
                 String[] columns = scan1.nextLine().split("\t\t");
-                currencyHashMap.put(columns[0], columns.double.parseDouble().[1]);
 
+                currencyHashMap.put(columns[0], Double.valueOf(columns[1]));
 
             }
         }
@@ -80,7 +82,7 @@ public class Calculator {
         }
         else
         {
-            currency1=currencyHashMap.get(userStartCurrency).doubleValue();
+            currency1= currencyHashMap.get(userStartCurrency).doubleValue();
             currency1=currency1*userStartAmount;
             currency2=currencyHashMap.get(userTargetCurrency).doubleValue();
             result=currency1*currency2;
