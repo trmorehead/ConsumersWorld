@@ -6,8 +6,8 @@ import android.os.AsyncTask;
 import org.json.JSONTokener;
 
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -22,7 +22,7 @@ import javax.net.ssl.HttpsURLConnection;
  * Once parsed the 10 currencies will be written to a local text file.
  * Created by tmore on 12/5/2015.
  */
-public class Fetch extends AsyncTask<Void, Void, org.json.simple.JSONObject>
+public class Fetch extends AsyncTask<Void, Void, org.json.JSONObject>
 {
     Exception Exception;
     //https://openexchangerates.org/api/latest.json?app_id=56eecba260d044edbd11c2b2a772f261
@@ -74,7 +74,7 @@ public class Fetch extends AsyncTask<Void, Void, org.json.simple.JSONObject>
                 object = (JSONObject) new JSONTokener(sb.toString()).nextValue();
 
                 FileWriter file = new FileWriter(".../file1.txt");
-                file.write(object.toJSONString());
+                file.write(object.toString());
             }
             finally
             {
