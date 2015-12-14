@@ -34,7 +34,7 @@ public class Calculator {
 
                 String[] columns = scan1.nextLine().split("\t\t");
 
-                currencyHashMap.put(columns[0], (double)columns[1].Double.parseDouble());
+                currencyHashMap.put(columns[0], Double.valueOf(columns[1]));
 
             }
         }
