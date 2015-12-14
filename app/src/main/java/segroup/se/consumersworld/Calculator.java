@@ -17,7 +17,6 @@ public class Calculator extends Activity {
     private String userTargetCurrency;
     private Double userStartAmount;
     EditText rawTargetCurr;
-    private double resultToUser;
     private HashMap<String, Double> currencyHashMap;
 
     /**
@@ -80,19 +79,19 @@ public class Calculator extends Activity {
     {
         double currency1;
         double currency2;
-        double result;
+        double resultToUser;
 
         if(userStartCurrency=="USD")
         {
-            result = userStartAmount*getAltCurrencyValue();
-            return result;
+            resultToUser = userStartAmount*getAltCurrencyValue();
+            return resultToUser;
         }
         else
         {
             currency1= currencyHashMap.get(userStartCurrency).doubleValue();
             currency1=currency1*userStartAmount;
             currency2=currencyHashMap.get(userTargetCurrency).doubleValue();
-            resultToUser=currency1*currency2;
+            resultToUser = currency1*currency2;
             return resultToUser;
         }
     }
