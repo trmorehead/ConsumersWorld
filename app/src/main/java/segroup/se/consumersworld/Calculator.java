@@ -1,6 +1,9 @@
 package segroup.se.consumersworld;
 
-import java.util.HashMap;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.*;
+import java.util.Scanner;
 
 /**
  * Calculates the rate
@@ -11,7 +14,7 @@ public class Calculator {
     private String userTargetCurrency;
     private double userStartAmount;
     private double resultToUser;
-    private HashMap currencyHashMap;
+    private HashMap<String, Double> currencyHashMap;
 
     /**
      *
@@ -24,18 +27,17 @@ public class Calculator {
      *Creates a Hashmap from the text file
      * that is created using the Fetch class.
      */
-    public void altCurrencyValue(){
-        public static void main(String[] args) throws FileNotFoundException {
+        public void altCurrencyValue() throws FileNotFoundException {
             Scanner scan1 = new Scanner(new FileReader("exchangerates.txt"));
-            HashMap<String code, double rate> currencyHashMap = new HashMap<String, double >();
-            while (scanner.hasNextLine()) {
+             currencyHashMap = new HashMap<String, Double>();
+            while (scan1.hasNextLine()) {
 
-                String[] columns = scanner.nextLine().split("\t\t");
-                currencyHashMap.put(columns[0], columns. double.parseDouble(). [1]);
-                )
+                String[] columns = scan1.nextLine().split("\t\t");
+                currencyHashMap.put(columns[0], columns.double.parseDouble().[1]);
 
 
             }
+        }
 
     /**
      * Retrieves a double value of world currency values
@@ -56,7 +58,7 @@ public class Calculator {
      */
     public double getAltCurrencyValue()
     {
-        return .2;
+        return currencyHashMap.get(userTargetCurrency).doubleValue();
     }
 
     /**
@@ -67,7 +69,23 @@ public class Calculator {
      */
     public double convertCurrency()
     {
-        return .2;
+        double currency1;
+        double currency2;
+        double result;
+
+        if(userStartCurrency=="USD")
+        {
+            result = userStartAmount*getAltCurrencyValue();
+            return result;
+        }
+        else
+        {
+            currency1=currencyHashMap.get(userStartCurrency).doubleValue();
+            currency1=currency1*userStartAmount;
+            currency2=currencyHashMap.get(userTargetCurrency).doubleValue();
+            result=currency1*currency2;
+            return result;
+        }
     }
 
     /**
@@ -76,9 +94,10 @@ public class Calculator {
      * UserTargetCurrency textbox.
      * @return String
      */
+
     public String toString()
     {
-        return "to string";
+        return "" + convertCurrency();
     }
 
 
