@@ -16,6 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     public Button btnClick;
+    public Button btnClick2;
 
 
     /**
@@ -30,7 +31,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
         btnClick = (Button) findViewById(R.id.button);
         btnClick.setOnClickListener(this);
-
+        btnClick2 = (Button) findViewById(R.id.button2);
+        btnClick2.setOnClickListener(this);
 
 
     }
@@ -93,7 +95,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
      */
     public void btnClick2()
     {
-
+        startActivity(new Intent(getApplicationContext(), PAge3Activity.class));
     }
 
     /**
