@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 
 import org.json.JSONTokener;
 import org.json.simple.JSONObject;
+//import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -72,6 +73,7 @@ public class Fetch extends AsyncTask<Void, Void, JSONObject>
 
                 FileWriter file = new FileWriter(".../file1.txt");
                 file.write(object.toJSONString());
+                //file.write(object.toString());
             }
             finally
             {
