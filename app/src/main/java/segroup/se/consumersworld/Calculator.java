@@ -21,17 +21,21 @@ public class Calculator extends Activity {
     private HashMap<String, Double> currencyHashMap;
 
     /**
-     *
+     * Constructor
      */
-    public Calculator()
-    {
+    public Calculator() throws FileNotFoundException {
+        //link to xml components
         Spinner fromCurrSpinner = (Spinner) findViewById(R.id.fromCurrSpinner);
         Spinner toCurrSpinner = (Spinner) findViewById(R.id.toCurrSpinner);
         userStartCurrency = fromCurrSpinner.getSelectedItem().toString();
         userTargetCurrency = toCurrSpinner.getSelectedItem().toString();
+
+        //turn the from currency input into a Double
         rawTargetCurr = (EditText) findViewById(R.id.FromCurrTextInput);
         String holder = rawTargetCurr.toString();
         userStartAmount = Double.valueOf(holder);
+
+        altCurrencyValue();
     }
 
     /**
