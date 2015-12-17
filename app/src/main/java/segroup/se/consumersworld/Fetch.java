@@ -92,6 +92,7 @@ public class Fetch extends AsyncTask<Void, Void, JSONObject>
         {
             Log.e("ERROR", e.getMessage(), e);
         }
+
         return object;
     }
 

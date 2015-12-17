@@ -44,17 +44,18 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
         Fetch initialFetch = new Fetch();
         JSONObject activityObject = new JSONObject(initialFetch.jsonHolder());
+        jsonToFile(activityObject);
     }
 
     protected void jsonToFile(JSONObject jsonThing)
     {
         try
         {
-
             Context context = getApplicationContext();
-            //File file = new File();
             FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
-            //file.write(jsonThing.toJSONString());
+            StringBuilder buildJSONString = new StringBuilder(jsonThing.toJSONString());
+            String jsonString = new String(buildJSONString);
+            File file = new File(jsonString);
         }
         catch(Exception e)
         {
