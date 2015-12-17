@@ -57,17 +57,6 @@ public class Calculator extends Activity {
     /**
      * Retrieves a double value of world currency values
      * that are equal to 1 U.S. dollar from a Hashmap.
-     * These values are  to be used in the convertCurrency method
-     * @return double
-     */
-    public double getStartCurrencyValue()
-    {
-        return .2;
-    }
-
-    /**
-     * Retrieves a double value of world currency values
-     * that are equal to 1 U.S. dollar from a Hashmap.
      * These values are to be used in the convertCurrency method.
      * @return double
      */

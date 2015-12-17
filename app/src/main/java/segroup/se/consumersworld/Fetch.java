@@ -95,9 +95,9 @@ public class Fetch extends AsyncTask<Void, Void, JSONObject>
         return object;
     }
 
-    public JSONObject jsonHolder(JSONObject heldObject)
+    public JSONObject jsonHolder()
     {
-        JSONObject held = heldObject;
+        JSONObject held = object;
         return held;
     }
 

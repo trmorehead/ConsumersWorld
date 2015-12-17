@@ -52,7 +52,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         {
 
             Context context = getApplicationContext();
-            File file = new File();
+            //File file = new File();
             FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
             //file.write(jsonThing.toJSONString());
         }

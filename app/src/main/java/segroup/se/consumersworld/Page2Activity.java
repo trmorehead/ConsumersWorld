@@ -40,6 +40,7 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
         toCurrSpinner.setAdapter(adapter);
         toCurrSpinner.setOnItemSelectedListener(this);
         convert = (Button) findViewById(R.id.button3);
+        convert.setOnClickListener((View.OnClickListener) this);
         fromCurrInput = (EditText) findViewById(R.id.FromCurrTextInput);
         fromCurrInput.setTextColor(Color.parseColor("#FFFFFF"));
         convertedCurr = (TextView) findViewById(R.id.convertedCurrAutoUpdateText);
