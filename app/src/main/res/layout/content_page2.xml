@@ -54,16 +54,6 @@
         android:paddingRight="0px"
         android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/FromCurrTextInput"
-        android:hint="From Currency"
-        android:textColorHint="#787878"
-        android:inputType="numberDecimal"
-        android:layout_below="@+id/toCurrSpinner"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="175dp"
@@ -110,6 +100,17 @@
         android:textColorHint="#D8D8D8"
         android:id="@+id/fromGoodRefPrice"
         android:layout_below="@+id/convertedCurrAutoUpdateText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/FromCurrTextInput"
+        android:hint="From Currency"
+        android:textColorHint="#787878"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/toCurrSpinner"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

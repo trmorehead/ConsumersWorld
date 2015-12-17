@@ -1,7 +1,6 @@
 package segroup.se.consumersworld;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -76,7 +75,7 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
      */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        //create toast message that appears when user selects country from spinner.
         TextView myText = (TextView) view;
         ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
         Toast.makeText(this, "You Selected " + myText.getText(), Toast.LENGTH_SHORT).show();
@@ -97,11 +96,10 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
      */
     public void convert() throws FileNotFoundException {
 
-        Intent intent = new Intent(this, Calculator.class);
-        this.startActivity(intent);
+        Calculator converterOfCurrency = new Calculator();//get a calculator converter
+        converterOfCurrency.convertCurrency();//run convertCurrency method from Calculator
 
-        Calculator converterOfCurrency = new Calculator();
-        converterOfCurrency.convertCurrency();
+        //print the converted currency as a string to TextView convertedCurrAutoUpdateText for user
         convertedCurr.setText(converterOfCurrency.toString());
 
     }

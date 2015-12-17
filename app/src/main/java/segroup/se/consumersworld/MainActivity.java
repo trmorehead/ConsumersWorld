@@ -14,8 +14,7 @@ import android.widget.Toast;
 
 import org.json.simple.JSONObject;
 
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 //testing from trmorehead0
 //first commit the changes to git then push the file to github.
 //then others can sync and update their files without even closing AS.
@@ -51,11 +50,16 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     {
         try
         {
-            Context context = getApplicationContext();
-            FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
-            StringBuilder buildJSONString = new StringBuilder(jsonThing.toJSONString());
-            String jsonString = new String(buildJSONString);
-            File file = new File(jsonString);
+
+            //FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
+            //StringBuilder buildJSONString = new StringBuilder(jsonThing.toJSONString());
+            //String jsonString = new String(buildJSONString);
+            //File file = new File(jsonString);
+
+                FileWriter file = new FileWriter(".../exchangerates.txt");
+                file.write(jsonThing.toJSONString());
+                System.out.println("Successfully Copied JSON Object to File...");
+                System.out.println("\nJSON Object: " + jsonThing);
         }
         catch(Exception e)
         {

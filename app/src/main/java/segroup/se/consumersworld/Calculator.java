@@ -11,7 +11,9 @@ import java.util.Scanner;
 
 /**
  * Calculates the rate
- * Created by tmore on 12/5/2015.
+ * @author Kendall Free, Christiana Tucker, Kunle Akinfeleye, Amanda Ambrose, Thomas Morehead
+ * on 12/5/2015.
+ * @version 1.0
  */
 public class Calculator extends Activity {
     private String userStartCurrency;
