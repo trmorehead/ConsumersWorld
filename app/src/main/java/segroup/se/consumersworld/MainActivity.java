@@ -1,7 +1,6 @@
 package segroup.se.consumersworld;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,8 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.simple.JSONObject;
-
-import java.io.FileWriter;
 //testing from trmorehead0
 //first commit the changes to git then push the file to github.
 //then others can sync and update their files without even closing AS.
@@ -23,7 +20,6 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
     public Button btnClick;
     public Button btnClick2;
-    Context context;
 
 
     /**
@@ -40,10 +36,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         btnClick.setOnClickListener(this);
         btnClick2 = (Button) findViewById(R.id.button2);
         btnClick2.setOnClickListener(this);
-
+        /*
         Fetch initialFetch = new Fetch();
-        JSONObject activityObject = new JSONObject(initialFetch.jsonHolder());
+        JSONObject activityObject;
+        activityObject = new JSONObject(initialFetch.jsonHolder());
         jsonToFile(activityObject);
+        */
     }
 
     protected void jsonToFile(JSONObject jsonThing)
@@ -51,15 +49,17 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         try
         {
 
-            //FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
-            //StringBuilder buildJSONString = new StringBuilder(jsonThing.toJSONString());
-            //String jsonString = new String(buildJSONString);
-            //File file = new File(jsonString);
+            /*
+            FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
+            StringBuilder buildJSONString = new StringBuilder(jsonThing.toJSONString());
+            String jsonString = new String(buildJSONString);
+            File file = new File(jsonString);
 
-                FileWriter file = new FileWriter(".../exchangerates.txt");
-                file.write(jsonThing.toJSONString());
-                System.out.println("Successfully Copied JSON Object to File...");
-                System.out.println("\nJSON Object: " + jsonThing);
+                //FileWriter file = new FileWriter(".../exchangerates.txt");
+                // file.write(jsonThing.toJSONString());
+                //System.out.println("Successfully Copied JSON Object to File...");
+                //System.out.println("\nJSON Object: " + jsonThing);
+                */
         }
         catch(Exception e)
         {

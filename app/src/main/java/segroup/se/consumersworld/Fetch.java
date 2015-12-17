@@ -1,21 +1,18 @@
 package segroup.se.consumersworld;
 
-import android.content.Context;
-import android.util.Log;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.json.JSONTokener;
 import org.json.simple.JSONObject;
-//import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
+
+//import org.json.JSONObject;
 
 /**
  * Fetch class will fetch a JSON file from www.openexchangerates.org.
@@ -37,7 +34,7 @@ public class Fetch extends AsyncTask<Void, Void, JSONObject>
      */
     public Fetch()
     {
-
+        doInBackground();
     }
 
     /**
