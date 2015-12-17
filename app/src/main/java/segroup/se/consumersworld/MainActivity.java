@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         btnClick2.setOnClickListener(this);
 
         Fetch initialFetch = new Fetch();
-        JSONObject activityObject = new JSONObject(initialFetch.doInBackground());
+        JSONObject activityObject = new JSONObject(initialFetch.jsonHolder());
     }
 
     protected void jsonToFile(JSONObject jsonThing)
@@ -52,7 +52,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         {
 
             Context context = getApplicationContext();
-            File file = new File()
+            File file = new File();
             FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
             //file.write(jsonThing.toJSONString());
         }
