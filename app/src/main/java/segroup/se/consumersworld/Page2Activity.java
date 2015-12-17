@@ -7,6 +7,8 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +17,8 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
 
     Spinner fromCurrSpinner;
     Spinner toCurrSpinner;
+    Button convert;
+    EditText fromCurrInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,19 +27,23 @@ public class Page2Activity extends Activity implements AdapterView.OnItemSelecte
         // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        fromCurrSpinner = (Spinner) findViewById(R.id.fromCurrSpinner);
+        fromCurrSpinner = (Spinner) findViewById(R.id.fromCurrSpinner);//define spinner from content_page2.xml
         toCurrSpinner = (Spinner) findViewById(R.id.toCurrSpinner);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Currencies, android.R.layout.simple_spinner_dropdown_item);
         fromCurrSpinner.setAdapter(adapter);
         fromCurrSpinner.setOnItemSelectedListener(this);
         toCurrSpinner.setAdapter(adapter);
         toCurrSpinner.setOnItemSelectedListener(this);
+        convert = (Button) findViewById(R.id.button3);
+        fromCurrInput = (EditText) findViewById(R.id.FromCurrTextInput);
+        fromCurrInput.setTextColor(Color.parseColor("#FFFFFF"));
 
     }
 
     protected void onClick(View v) {
         Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
+
     }
 
 

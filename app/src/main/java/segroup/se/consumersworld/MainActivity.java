@@ -34,7 +34,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         btnClick2 = (Button) findViewById(R.id.button2);
         btnClick2.setOnClickListener(this);
 
-        //Fetch initialFetch = new Fetch();
+        Fetch initialFetch = new Fetch();
     }
 
     //@Override
