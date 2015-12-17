@@ -1,14 +1,21 @@
 package segroup.se.consumersworld;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.simple.JSONObject;
+
+import java.io.File;
+import java.io.FileOutputStream;
 //testing from trmorehead0
 //first commit the changes to git then push the file to github.
 //then others can sync and update their files without even closing AS.
@@ -17,6 +24,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
     public Button btnClick;
     public Button btnClick2;
+    Context context;
 
 
     /**
@@ -35,6 +43,24 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         btnClick2.setOnClickListener(this);
 
         Fetch initialFetch = new Fetch();
+        JSONObject activityObject = new JSONObject(initialFetch.doInBackground());
+    }
+
+    protected void jsonToFile(JSONObject jsonThing)
+    {
+        try
+        {
+
+            Context context = getApplicationContext();
+            File file = new File()
+            FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
+            //file.write(jsonThing.toJSONString());
+        }
+        catch(Exception e)
+        {
+            Log.e("ERROR", e.getMessage(), e);
+        }
+
     }
 
     //@Override
