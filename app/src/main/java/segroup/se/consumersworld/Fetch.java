@@ -1,5 +1,6 @@
 package segroup.se.consumersworld;
 
+import android.content.Context;
 import android.util.Log;
 import android.os.AsyncTask;
 
@@ -8,6 +9,8 @@ import org.json.simple.JSONObject;
 //import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -71,9 +74,14 @@ public class Fetch extends AsyncTask<Void, Void, JSONObject>
 
                 object = (JSONObject) new JSONTokener(sb.toString()).nextValue();
 
-                FileWriter file = new FileWriter("./exchangerates.txt");
-                file.write(object.toJSONString());
+                //FileWriter file = new FileWriter("./exchangerates.txt")
+                //file.write(object.toJSONString());
                 //file.write(object.toString());
+                //File cacheDir = new File(android.content.Context.getCacheDir(),"exchangerates.txt");
+                //appCacheDir = context.getCacheDir();
+                //FileOutputStream fileos = openFileOutput("exchangerates.txt", Context.MODE_PRIVATE);
+                //android.content.Context.getCacheDir();
+                //FileOutputStream fos = openFileOutput();
             }
             finally
             {
