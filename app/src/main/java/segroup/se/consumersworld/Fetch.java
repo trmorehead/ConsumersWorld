@@ -71,7 +71,7 @@ public class Fetch extends AsyncTask<Void, Void, JSONObject>
 
                 object = (JSONObject) new JSONTokener(sb.toString()).nextValue();
 
-                FileWriter file = new FileWriter(".../file1.txt");
+                FileWriter file = new FileWriter("./exchangerates.txt");
                 file.write(object.toJSONString());
                 //file.write(object.toString());
             }
